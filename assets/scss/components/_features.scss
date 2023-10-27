@@ -1,0 +1,28 @@
+.feature {
+    margin-top: 60px;
+    .feature__card {
+        background:linear-gradient(148deg, #FDEEED 7.17%, #CEE7EA 96.33%);
+        padding: 18px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: $border-radius-md;
+        .feature__card__hed {
+            text-align: center;
+            h1 {
+                font-size:20px;
+            }
+        }
+        .feature__card__body {
+            text-align: center;
+            margin-top:20px ;
+        }
+    }
+}
+// ----------- responsive ----------- //
+@media only screen and (max-width:360px) {
+    .feature__card {
+        margin-top:20px ;
+    }
+}

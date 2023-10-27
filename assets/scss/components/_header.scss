@@ -1,10 +1,74 @@
-header {
+
+.bg-header {
     background: url($images-path+'/image2.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 1200px;
     width: 100%;
-    border-bottom: 1px solid $gray;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
     
+}
+
+.header {
+   padding-top:20px ;
+
+
+   .header__navbar {
+    .navbar-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            h3 {
+                font-size: $font-s;
+                font-weight: 600;
+            }
+        }
+      
+    }
+   }
+}
+
+.header__navbar__link {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    position: relative;
+    .nav-link {
+        color: $black;
+        margin-right: 100px;
+       
+    }
+    .lang {
+        padding: 8px 10px;
+        align-items: center;
+        border: 1px solid $black;
+        border-radius: $border-radius;
+        position:absolute;
+        top: 0;
+        right: 0;
+        
+        width: 88px;
+        .lang__box {
+            display: none;
+           
+        }
+    }
+}
+// --------------- reasponsive -------------- //
+@media only screen and (max-width: 360px) {
+    .navbar-brand {
+        h3 {
+            font-size: 14px;
+        }
+    }
 }

@@ -1,0 +1,31 @@
+.faq {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    .faq__head {
+        text-align: center;
+        h1 {
+            font-size: 35px;
+            font-weight: 700;
+        }
+    }
+}
+.faq__card {
+    margin-top:20px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 15px ;
+    border: 1px solid $gray ;
+    border-radius: $border-radius;
+    transition: all .3s ease;
+    // transform: rotateX('');
+   .faq__card__head {
+    display: flex;
+    padding: 8px;
+    gap: 8px;
+   }
+    
+}
+.faq__card__body {
+    padding-left:15px ;
+    display: none;
+}

@@ -1,0 +1,51 @@
+
+// -------box Download --------------//
+.download__box {
+    margin-top: 60px;
+    background-color: $white;
+    width: 100% ;
+    padding:156px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed $black;
+    border-radius: $border-radius;
+    box-shadow: 8px 12px 25px 0px rgba(0, 0, 0, 0.10);
+    .form-download {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.show_box {
+    width: 500px;
+    width: 300px;
+    height: 300px;
+    border: 1px dashed $black ;
+    border-radius: $border-radius;
+    display: none;
+    overflow: hidden;
+    &:hover {
+        background-color: rgba(38, 40, 58, 0.6);
+        // opacity: ;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+.file-delete {
+    display: none;
+    transition: all .3s ease;
+    position: relative;
+    top:-240px;
+    right: -23px;
+    // padding: 5px;
+    width: 20px;
+    height: 20px;
+    // border-radius: 50px;
+    // background-color:$white;
+    svg {
+        vertical-align: middle;
+    }
+}

@@ -10291,14 +10291,241 @@ body {
   overflow-x: hidden;
 }
 
-header {
+.icon {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.icon-trans {
+  transition: all 0.3s ease;
+  transform: rotate(180deg);
+}
+
+.f-s {
+  font-size: 12px;
+}
+
+.f-20 {
+  font-size: 20px;
+}
+
+.f-24 {
+  font-size: 24px;
+}
+
+.m_t-30 {
+  margin-top: 42px;
+}
+
+.bg-header {
   background: url("../images/image2.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 1200px;
   width: 100%;
-  border-bottom: 1px solid #ccc;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.header {
+  padding-top: 20px;
+}
+.header .header__navbar .navbar-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header__navbar .navbar-nav .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header .header__navbar .navbar-nav .navbar-brand h3, .header .header__navbar .navbar-nav .navbar-brand .h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.header__navbar__link {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  position: relative;
+}
+.header__navbar__link .nav-link {
+  color: #000;
+  margin-right: 100px;
+}
+.header__navbar__link .lang {
+  padding: 8px 10px;
+  align-items: center;
+  border: 1px solid #000;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 88px;
+}
+.header__navbar__link .lang .lang__box {
+  display: none;
+}
+
+@media only screen and (max-width: 360px) {
+  .navbar-brand h3, .navbar-brand .h3 {
+    font-size: 14px;
+  }
+}
+.banner {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 60px;
+}
+.banner .banner__text h1, .banner .banner__text .h1 {
+  font-size: 54px;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 650px) {
+  .banner__text h1, .banner__text .h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+.download__box {
+  margin-top: 60px;
+  background-color: #fff;
+  width: 100%;
+  padding: 156px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed #000;
+  border-radius: 10px;
+  box-shadow: 8px 12px 25px 0px rgba(0, 0, 0, 0.1);
+}
+.download__box .form-download {
+  display: flex;
+  flex-direction: column;
+}
+
+.show_box {
+  width: 500px;
+  width: 300px;
+  height: 300px;
+  border: 1px dashed #000;
+  border-radius: 10px;
+  display: none;
+  overflow: hidden;
+}
+.show_box:hover {
+  background-color: rgba(38, 40, 58, 0.6);
+}
+.show_box img {
+  width: 100%;
+  height: 100%;
+}
+
+.file-delete {
+  display: none;
+  transition: all 0.3s ease;
+  position: relative;
+  top: -240px;
+  right: -23px;
+  width: 20px;
+  height: 20px;
+}
+.file-delete svg {
+  vertical-align: middle;
+}
+
+.feature {
+  margin-top: 60px;
+}
+.feature .feature__card {
+  background: linear-gradient(148deg, #FDEEED 7.17%, #CEE7EA 96.33%);
+  padding: 18px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+.feature .feature__card .feature__card__hed {
+  text-align: center;
+}
+.feature .feature__card .feature__card__hed h1, .feature .feature__card .feature__card__hed .h1 {
+  font-size: 20px;
+}
+.feature .feature__card .feature__card__body {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 360px) {
+  .feature__card {
+    margin-top: 20px;
+  }
+}
+.faq {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+.faq .faq__head {
+  text-align: center;
+}
+.faq .faq__head h1, .faq .faq__head .h1 {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.faq__card {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.faq__card .faq__card__head {
+  display: flex;
+  padding: 8px;
+  gap: 8px;
+}
+
+.faq__card__body {
+  padding-left: 15px;
+  display: none;
+}
+
+.footer {
+  margin-top: 30px;
+  background-color: #A3BDD9;
+  padding: 30px 0;
+}
+.footer .footer__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.footer .footer__body .nav-link {
+  color: #000;
+}
+
+@media only screen and (max-width: 470px) {
+  .footer .footer__body .address {
+    white-space: nowrap;
+  }
+  .footer .footer__body .nav {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
